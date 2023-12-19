@@ -1,0 +1,61 @@
+1) Implement a function such that given a list of strings as a parameter, it counts the number of strings with the following requirements and returns that number:
+- The string has 2 or more characters (for example: 'ab', '12345', 'aaaa' but not ' ' or 'a');
+- First and last character of the string are the same character (for example: 'aura', '1uiui1' but not 'abcd' or 'aaa ').
+
+An example:
+Input:
+  ["tsirptsirp", "catnip-c", "regular", "something"]
+Expected output (or rather, return value of the function):
+  2
+
+2) sorted() - is an important built-in Python function. 
+Given a list as a parameter, sorted() returns a new list that is sorted. 
+Numeric values are by default returned in ascending order, strings usethe following set of rules: 
+number > upper case letters > lower case letters.
+
+Use this and the information you have about lists to implement a function that takes a list of strings as a parameter and returns 
+a list in regularly sorted order except that all the strings beginning with the character 'x' are sorted first.
+
+An example:
+Input:
+  ['mixture', 'xxx', 'automaton', 'xavier', 'aave', '111']
+Expected output:
+  ['xavier', 'xxx', '111'. 'aave', 'automaton', 'mixture']
+
+*Hint: You can use two lists.
+
+3) Given two lists sorted in ascending order, implement a function that returns a sorted merged list.
+
+An example:
+Input:
+  list1 = [10, 20, 30, 40, 50]
+  list2 = [5, 7, 25, 55]
+Expected output:
+  [5, 7, 10, 20, 25, 30, 40, 50, 55]
+
+4) Given a list of strings, implement a function such that it creates a bookkeeping dictionary counting appearances of each unique element in the list and returns those values in a list.
+Here we can use the knowledge that each key of a dictionary is unique. 
+Complete the following function to solve the assignment:
+
+def count_uniques(list_of_strings):
+    bookkeeping = {}
+
+    for word in list_of_strings:
+    # for each word in the list, we check if it is already in the bookkeeping dict.
+    # if it is not, we can safely say that there is at least one.
+        if word not in bookkeeping:
+            bookkeeping[word] = 1
+        else:
+            # what should happen here?
+    # after the loop, our bookkeeping should have the number of appearances of each word
+    print(bookkeeping)
+    # the function should return something
+
+test_list = ["erkki", "petteri", "erkki", "anselmi", "uolevi"]
+print(count_uniques(test_list))
+
+An example:
+Input:
+  ['aaa', 'bbb', 'aaa', 'ccc']
+Expected output:
+  [2, 1, 1]

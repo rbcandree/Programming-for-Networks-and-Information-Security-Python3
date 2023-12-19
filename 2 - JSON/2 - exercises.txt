@@ -1,0 +1,41 @@
+0) Request the JSON-formatted user list from: https://jsonplaceholder.typicode.com/users 
+Form a new JSON that contains a list of the users with the following information only: 
+  name, phone number and geo location.
+
+To make sure that you have formed the JSON correctly print the string.
+
+1)
+a) Given the following dictionary:
+dict_to_jsonify = {'iron': 5, 'silver': 7, 'gold': 3, 'copper': 4}
+Write a program that produces indented json string from the dictionary.
+
+b) Given the following json string:
+employee_json = '{"name": "Teppo", "age": 32, "class": "IT"}'
+Write a program that produces a python object from the string.
+
+2) Implement a program that opens weather-data.json
+You can open this file from your own hard drive like this:
+
+import json
+with open('D:\\path_to_the_file\\weather-data.json') as fh:
+data =json.load(fh)
+
+*notice the use of the escape character \ in front of the directory path steps.
+Find out programmatically how many KUITUVASTE_SUURI_1 measurements have been made. 
+You may need to have a look at the json file to find out how to handle it in Python.
+
+3) Acquire the JSON file from: https://jsonplaceholder.typicode.com/todos
+Implement a function that explores the form of the JSON file and outputs the following information:
+ - The keys used in the dictionary;
+ - The range of userIds;
+ - The range of taskIds;
+ - The number of completed tasks;
+ - The number of tasks with the word "delectus" in their title.
+
+4) Take the JSON from the exercise 2. 
+The related user information can be found from: 
+https://jsonplaceholder.typicode.com/users
+https://jsonplaceholder.typicode.com/todos
+
+Use these 2 JSON files and programmatically find out the names of the users with the most completed tasks. 
+You can assume that the id in the users-JSON refers to the userID in the todos-JSON.

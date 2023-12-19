@@ -1,0 +1,33 @@
+1) In this exercise we’ll be building an API for simplified inventory management. 
+API is used by a store that buys and sells books. Your job is to build an API that keeps track of the books currently in the inventory.
+
+You are expected to use Flask for the interface implementation and postgresql as your database backbone. 
+That is, when an item is sold to your shop you should insert it into the database and when one is purchased you should delete the purchased object from the database.
+
+In each of the steps you should also implement a test program to test your interface. This should only be a couple of lines of code. 
+Example (notice how we include a json in the POST):
+
+import requests
+
+rreply = requests.post('http://localhost:5000/sell/', json={"title": "book","author":"Esteri","year_of_publication":1990})
+print(rreply.status_code)
+print(rreply.json())
+
+1. Implement the route:
+/sell/
+
+This route is accessed via POST method. The data is delivered in a JSON.
+When the interface gets a "sell request", it should insert the item into the database. 
+The items should have the following information: Title, Author, Year of Publication. For this we will obviously need a database table.
+An id is added to each individual book by the system (might be good to use the serial datatype in the database for this). 
+This id is shown in the response from the /list/ route and it is referenced by the /purchase/ route.
+
+2. Implement the route:
+/list/
+This route is accessed via GET method only. It returns a list of the items currently in the inventory.
+
+3. Implement the route:
+/purchase/<item id>
+This route is accessed via GET method. The route checks if the item referenced by the <item id> is in the inventory. 
+If the item is in the inventory it is removed from there and an 'ok' -response is sent to the client. 
+If there are no items with <item id> in the inventory a 'not found' response is sent to the client.

@@ -1,0 +1,16 @@
+Previously we have used Python's file handling mechanisms to solve file related problems. 
+With the addition of running shell commands from our programs and handling the output in the script, some of these tasks become easier. 
+Feel free to solve the following problems in whichever way you feel is easiest to you. Avoid excessive use of third party libraries.
+
+1) Implement a Python script that completes the following steps:
+  - Create a random number (5-10) of new, empty randomly named files;
+  - Associate an index with each of these files in your script (that is a number from 1 to <the number of files you have>);
+  - Write the following string to each of the files:
+     This file's index is: <index>
+     Replace the <index> with the actual index of the file
+  - Read the contents of the files and print that on screen;
+  - Remove the files.
+*Be careful with the last step. Take a snapshot of your VM to be sure.
+
+2) Write a program that lists the contents of a given directory just like "ls -l" would but filter out all lines containing the string 'banana'.
+Implement the filtering on Python side.

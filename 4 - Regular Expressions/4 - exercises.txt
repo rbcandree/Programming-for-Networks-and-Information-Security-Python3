@@ -1,0 +1,78 @@
+0) E-mail address validation example.
+Let's write a program to validate an e-mail address.
+We can use re.fullmatch(pattern, string) method here. 
+fullmatch() returns match object if the whole string matches the pattern, otherwise it returns None.
+
+
+1) There are numerous regex related websites available. Check out at: 
+https://regex101.com/#python
+https://developers.google.com/edu/python/regular-expressions#basic-patterns
+How could you use these utilities to help with solving our exercise problems?
+
+2) Implement a function that takes user input as argument and checks if the string given by the user matches the following pattern. 
+If a match is found, the function returns True. Otherwise it returns False. Use regular expressions to check for the match.
+
+Patterns:
+a) The string only contains alphanumeric characters;
+b) The first three characters of the string are vowels;
+c) The string is a number greater than 100
+
+You may find the following structure helpful:
+def matches_pattern(user_input):
+    print("Checking if", user_input, "matches the pattern.")
+    # your code here
+    if matches:
+        return True
+    else:
+        return False
+
+did_it_match = matches_pattern(input("Give me a string: "))
+print("We found a match: ", did_it_match)
+
+In the following the string between < >'s is the user input. <>'s are not part of the expected output.
+
+Expected output for a):
+Give me a string: <"abcd123">
+We found a match: True
+
+Expected output for b):
+Give me a string: <"aabbcc">
+We found a match: False
+
+Expected output for c):
+Give me a string: <"123000111">
+We found a match: True
+
+3)
+a) Write down rules to form a working email address. There's no need to conform with all the specifics but your rule set should at least cover the most common cases, like first_name.last_name@gmail.com
+b) Form a regular expression that matches such strings that conform with the ruleset.
+c) Write a program that asks the user for an e-mail address, validates the given address and tells the user if the e-mail address conformed with the ruleset. Use regular expressions.
+
+4) Given a time in the format: hh:mm:ss, use regular expressions to programmatically validate that the given time matches the format. 
+A successful match should have two digits in each the hours, minutes and seconds.
+
+Expected output:
+
+Time to validate: 11:50:22
+Is valid: True
+
+Time to validate: 11:65:78
+Is valid: False
+
+5) We'll often end up in a situation where we want to run some regex pattern against a whole file and we want to process all the matches found. 
+This can be achieved by using findall() function from the re library:
+
+# our pattern in regex format
+pattern = r'some regex pattern'
+
+# create the file handle
+fh = open('some_file.txt', 'r')
+
+# feed the file into re.findall(). this results in a list of the matches.
+
+# notice here how fh.read() reads through the whole file.
+matches_as_list = re.findall(pattern, fh.read())
+
+Use this information to go through the weather-data.json to find all references to either "TIE" or "surfacemoisture". 
+Print the number of these findings. Note that the wanted references are case sensitive.
+Would you be able to find the whole measurement data related to these findings? How?

@@ -1,0 +1,28 @@
+1) Write a program that prints the following information on screen:
+
+a) You are allowed to do certain operations on datetime objects. 
+Create 2 separate datetime objects that refer to different points in time and explore the results of following operations:
+dt_obj_1 - dt_obj_2
+dt_obj_1 < dt_obj_2
+What can you tell about the - and < operators for datatime objects?
+
+b) Current time in epoch format. 
+What kind of operations are available for time represented in epoch format? 
+Convert the seconds since epoch to a more human readable format and print that also on screen.
+
+2) Given a string "2020-09-28  18:47:50", convert the string into a datetime object. 
+Access the objects year, month, day and hour attributes separately and print the result on screen. 
+Raise all of these values by one. Convert the resulting datetime object into a string of format YYYY-mm-dd HH:MM:SS.
+
+Do the same conversion but with the resulting string in format:
+"It's year 2021, day 29 of month 10 and it is 19:47:50."
+
+3) In weather-data.json roadstations with roadstation Id's 10038 and 19958 have faulty time synchronization.
+Fix the timestamps of all the measurements done on these stations by adding 2 minutes to the measuredtime attributes of the measurements 
+and writing the corrected information into the weather-data.json overwriting the faulty information.
+
+4)
+a) Find out programmatically which day of the week was on 1.10.1999
+b) Find out programmatically which day is 27 weeks before 1.10.1999
+c) Find out programmatically which day of the week is 157 days after 1.10.1999
+*Hint: strftime() method may help you with these.

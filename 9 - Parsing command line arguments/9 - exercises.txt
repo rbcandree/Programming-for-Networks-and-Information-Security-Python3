@@ -1,0 +1,28 @@
+1) Implement a program that takes a filename as a positional command line argument and appends the string given by optional command line argument --input to the end of that file. 
+If the --input argument is not given, overwrite the given file's content with the string: "Beginning of input stash:\n"
+
+2) Write a program that requests AIS (Automatic Identification System for marine vessels) metadata information from: 
+https://meri.digitraffic.fi/api/ais/v1/vessels 
+for a marine vessel identified by MMSI given as a command line argument to the script.
+
+Example input:
+python3 exercise_2.py 231319000
+
+Expected output:
+AIS metadata information for vessel identified by MMSI: 231319000
+{
+  "timestamp" : 1575510567036,
+  "destination" : "SURVEY",
+  "name" : "CECILIA",
+  "shipType" : 90,
+  "mmsi" : 231319000,
+  "callSign" : "OZ2157",
+  "imo" : 7381635,
+  "draught" : 43,
+  "eta" : 792832,
+  "posType" : 1,
+  "referencePointA" : 22,
+  "referencePointB" : 39,
+  "referencePointC" : 8,
+  "referencePointD" : 4
+}
